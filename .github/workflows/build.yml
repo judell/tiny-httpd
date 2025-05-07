@@ -37,7 +37,7 @@ jobs:
       - name: Build ${{ matrix.output }}
         run: |
           mkdir -p dist
-          GOOS=${{ matrix.goos }} GOARCH=${{ matrix.goarch }} go build -o dist/${{ matrix.output }} ./cmd/tiny-httpd
+          GOOS=${{ matrix.goos }} GOARCH=${{ matrix.goarch }} go build -o dist/${{ matrix.output }} ./tiny-httpd
 
       - name: Upload binary artifact
         uses: actions/upload-artifact@v4
